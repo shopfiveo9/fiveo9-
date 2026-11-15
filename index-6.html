@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171717">
+<title>FIVE 0 NINE | Fashion for Every Day</title>
+<style>
+:root{--ink:#171717;--muted:#777;--line:#e8e8e8;--paper:#fff;--soft:#f6f5f2;--accent:#c9a878}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}
+.topline{background:#171717;color:#fff;text-align:center;padding:9px 12px;font-size:11px;letter-spacing:1.5px}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.head{height:76px;max-width:1440px;margin:auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:Georgia,serif;font-weight:bold;font-size:27px;letter-spacing:3px;white-space:nowrap}.brand span{color:var(--accent)}
+.header-actions{display:flex;align-items:center;gap:20px}.icon-btn{border:0;background:none;font-size:13px;padding:8px 0;color:#222}.bag-count{display:inline-grid;place-items:center;background:#171717;color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;margin-left:4px}
+nav{display:flex;justify-content:center;gap:34px;padding:0 12px 17px;font-size:12px;letter-spacing:1.3px;text-transform:uppercase}nav a:hover{color:#a27e4e}
+.hero{min-height:490px;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.04)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85') center 42%/cover;display:flex;align-items:center;color:#fff}
+.hero-copy{max-width:1250px;width:100%;margin:auto;padding:60px 7%}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase}.hero h1{font:normal clamp(42px,7vw,76px)/1.02 Georgia,serif;max-width:570px;margin:18px 0}.hero p{font-size:14px;line-height:1.7;max-width:420px;color:#f2f2f2}.primary{display:inline-block;background:#fff;color:#171717;border:1px solid #fff;padding:15px 27px;margin-top:17px;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;transition:.2s}.primary:hover{background:transparent;color:#fff}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:25px 5%;border-bottom:1px solid var(--line);text-align:center}.benefits div{font-size:11px;letter-spacing:1px;text-transform:uppercase}.benefits small{display:block;color:var(--muted);font-size:10px;letter-spacing:.3px;margin-top:6px;text-transform:none}
+.section{max-width:1440px;margin:auto;padding:65px 5%}.section-head{text-align:center;margin-bottom:30px}.section-head .eyebrow{color:#9b805e}.section h2{font:normal 34px Georgia,serif;margin:10px 0}.section-head p{color:var(--muted);font-size:13px}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category{height:280px;position:relative;overflow:hidden;background:#eee}.category img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.category:hover img{transform:scale(1.05)}.category strong{position:absolute;bottom:18px;left:18px;background:#fff;padding:12px 17px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.shopbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:26px 0}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;padding:10px 15px;font-size:11px;letter-spacing:.5px}.filter.active,.filter:hover{background:#171717;color:#fff;border-color:#171717}.search-sort{display:flex;gap:8px}.search-sort input,.search-sort select{border:1px solid var(--line);padding:10px 12px;min-width:130px;font-size:12px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 16px}.product{min-width:0}.product-photo{position:relative;background:#f3f2ef;aspect-ratio:3/4;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s}.product:hover .product-photo img{transform:scale(1.035)}.tag{position:absolute;top:12px;left:12px;background:#fff;padding:7px 9px;font-size:9px;letter-spacing:1px}.heart{position:absolute;right:12px;top:10px;border:0;background:#fff;border-radius:50%;width:32px;height:32px;font-size:17px}.add{position:absolute;bottom:0;left:0;width:100%;border:0;background:rgba(255,255,255,.95);padding:14px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;transform:translateY(100%);transition:.2s}.product:hover .add{transform:translateY(0)}.product-info{padding:12px 2px}.product-name{font-size:12px;margin-bottom:7px}.product-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px}.price{font-weight:bold}.rating{font-size:10px;color:#a27e4e}
+.newsletter{background:var(--soft);text-align:center;padding:55px 20px}.newsletter h2{font:normal 32px Georgia,serif;margin:0 0 10px}.newsletter p{font-size:12px;color:var(--muted)}.newsletter form{display:flex;max-width:430px;margin:22px auto 0}.newsletter input{flex:1;min-width:0;border:1px solid #ddd;padding:14px}.newsletter button{background:#171717;color:white;border:0;padding:0 20px;font-size:10px;letter-spacing:1px}
+footer{background:#171717;color:#fff;padding:42px 5% 25px}.footer-grid{max-width:1300px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footer-grid p,.footer-grid a{color:#bbb;font-size:12px;line-height:2}.footer-grid h3{font:normal 20px Georgia,serif}.copyright{text-align:center;color:#888;border-top:1px solid #333;margin:30px auto 0;padding-top:20px;font-size:10px}
+.drawer-backdrop{position:fixed;inset:0;background:#0007;z-index:40;display:none}.drawer{position:fixed;right:0;top:0;height:100%;width:min(420px,100%);background:#fff;z-index:41;padding:24px;transform:translateX(105%);transition:.25s;overflow:auto}.drawer.open{transform:translateX(0)}.drawer-backdrop.show{display:block}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.drawer-head h2{font:normal 25px Georgia,serif}.close{border:0;background:none;font-size:25px}.cart-row{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}.cart-row img{width:78px;height:100px;object-fit:cover}.cart-row p{font-size:12px;margin:5px 0}.qty{display:flex;gap:10px;align-items:center;margin-top:8px}.qty button{background:#f2f2f2;border:0;padding:5px 10px}.cart-total{display:flex;justify-content:space-between;margin:24px 0;font-weight:bold}.checkout{width:100%;background:#171717;color:white;border:0;padding:16px;letter-spacing:1.5px;font-size:11px}.empty{text-align:center;color:var(--muted);padding:40px 0;font-size:13px}
+@media(max-width:800px){.head{height:65px;padding:0 4%}.brand{font-size:22px}nav{gap:17px;font-size:10px;overflow:auto;justify-content:flex-start;padding:0 4% 14px}.hero{min-height:420px}.categories{grid-template-columns:repeat(2,1fr)}.category{height:230px}.products{grid-template-columns:repeat(2,1fr);gap:22px 10px}.section{padding:48px 4%}.shopbar{align-items:flex-start;flex-direction:column}.add{transform:none}.benefits{padding:20px 4%;gap:6px}.benefits div{font-size:9px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:430px){.header-actions{gap:12px}.icon-btn{font-size:11px}.hero{min-height:380px}.hero-copy{padding:40px 6%}.categories{gap:8px}.category{height:190px}.category strong{left:8px;bottom:8px;padding:9px 10px;font-size:9px}.search-sort{width:100%}.search-sort input{flex:1;min-width:0}.search-sort select{min-width:105px}.benefits small{font-size:9px}}
+</style>
+</head>
+<body>
+<div class="topline">WELCOME TO FIVE 0 NINE — NEW SEASON, NEW STYLE</div>
+<header>
+ <div class="head">
+  <a class="brand" href="#">FIVE <span>0</span> NINE</a>
+  <div class="header-actions">
+   <button class="icon-btn" onclick="document.getElementById('search').focus()">⌕ SEARCH</button>
+   <button class="icon-btn" onclick="openCart()">BAG <span class="bag-count" id="bagCount">0</span></button>
+  </div>
+ </div>
+ <nav><a href="#shop" data-nav="All">New In</a><a href="#shop" data-nav="Women">Women</a><a href="#shop" data-nav="Men">Men</a><a href="#shop" data-nav="Shoes">Shoes</a><a href="#shop" data-nav="Accessories">Accessories</a></nav>
+</header>
+<main>
+<section class="hero"><div class="hero-copy"><div class="eyebrow">The new collection</div><h1>Style that moves with you.</h1><p>Discover everyday essentials, standout pieces and fresh looks for every side of you.</p><a class="primary" href="#shop">Explore the collection</a></div></section>
+<div class="benefits"><div>✦ New styles weekly<small>Fresh finds for every season</small></div><div>♡ Made for your style<small>Pieces you'll love to wear</small></div><div>↗ Shop with confidence<small>Support when you need it</small></div></div>
+<section class="section">
+ <div class="section-head"><div class="eyebrow">Find your look</div><h2>Shop by category</h2><p>Explore the latest styles from FIVE 0 NINE.</p></div>
+ <div class="categories">
+  <a class="category" href="#shop" data-cat="Women"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" alt="Women's fashion"><strong>Women</strong></a>
+  <a class="category" href="#shop" data-cat="Men"><img src="https://images.unsplash.com/photo-1516826957135-700d58e953c1?auto=format&fit=crop&w=700&q=80" alt="Men's fashion"><strong>Men</strong></a>
+  <a class="category" href="#shop" data-cat="Shoes"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Sneakers"><strong>Shoes & Sneakers</strong></a>
+  <a class="category" href="#shop" data-cat="Accessories"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80" alt="Handbag"><strong>Accessories</strong></a>
+ </div>
+</section>
+<section class="section" id="shop">
+ <div class="section-head"><div class="eyebrow">Curated for you</div><h2>Trending right now</h2><p>Explore our featured collection.</p></div>
+ <div class="shopbar"><div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Women">Women</button><button class="filter" data-filter="Men">Men</button><button class="filter" data-filter="Shoes">Shoes</button><button class="filter" data-filter="Accessories">Accessories</button></div><div class="search-sort"><input id="search" type="search" placeholder="Search products..." aria-label="Search products"><select id="sort" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div></div>
+ <div class="products" id="products"></div>
+</section>
+<section class="newsletter"><h2>A little style in your inbox</h2><p>Sign up for new arrivals, collection updates and special offers.</p><form onsubmit="event.preventDefault();alert('Thank you for your interest! Newsletter signup will be connected when the store backend is ready.');"><input type="email" required placeholder="Enter your email address" aria-label="Email address"><button type="submit">SIGN UP</button></form></section>
+</main>
+<footer><div class="footer-grid"><div><a class="brand" href="#" style="color:white">FIVE <span>0</span> NINE</a><p>Everyday fashion. Your way.<br>Discover your next favorite look with FIVE 0 NINE.</p></div><div><h3>Explore</h3><a href="#shop">New In</a><br><a href="#shop">Women</a><br><a href="#shop">Men</a><br><a href="#shop">Shoes</a></div><div><h3>Customer care</h3><a href="mailto:hello@shopfiveo9.com">Contact us</a><br><a href="#">Shipping information</a><br><a href="#">Returns & exchanges</a></div></div><div class="copyright">© <span id="year"></span> FIVE 0 NINE. All rights reserved.</div></footer>
+<div class="drawer-backdrop" id="backdrop" onclick="closeCart()"></div><aside class="drawer" id="drawer"><div class="drawer-head"><h2>Your bag</h2><button class="close" onclick="closeCart()" aria-label="Close cart">×</button></div><div id="cartItems"></div><div class="cart-total"><span>Subtotal</span><span id="subtotal">$0.00</span></div><button class="checkout" onclick="alert('Online checkout is not connected yet. Connect a secure payment provider before accepting orders.')">CONTINUE TO CHECKOUT</button><p style="font-size:10px;color:#777;line-height:1.6">Demo storefront: checkout and payment processing are not active yet.</p></aside>
+<script>
+const products=[
+{id:1,name:"Relaxed Everyday Blazer",cat:"Women",price:48.00,img:"https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80",tag:"NEW"},
+{id:2,name:"Classic Streetwear Jacket",cat:"Men",price:62.00,img:"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80",tag:"TRENDING"},
+{id:3,name:"Essential White Sneakers",cat:"Shoes",price:54.00,img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80",tag:"BESTSELLER"},
+{id:4,name:"Everyday Shoulder Bag",cat:"Accessories",price:39.00,img:"https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80",tag:"NEW"},
+{id:5,name:"Minimal Summer Outfit",cat:"Women",price:44.00,img:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80",tag:""},
+{id:6,name:"Modern Casual Shirt",cat:"Men",price:35.00,img:"https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80",tag:""},
+{id:7,name:"Everyday Running Sneakers",cat:"Shoes",price:68.00,img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80",tag:""},
+{id:8,name:"Classic Fashion Handbag",cat:"Accessories",price:46.00,img:"https://images.unsplash.com/photo-1590874500962-2e6b2f2b3e5a?auto=format&fit=crop&w=700&q=80",tag:""}
+];
+let activeFilter="All",cart=JSON.parse(localStorage.getItem("five09-cart")||"{}");
+const money=n=>"$"+n.toFixed(2);
+function renderProducts(){let list=products.filter(p=>(activeFilter==="All"||p.cat===activeFilter)&&p.name.toLowerCase().includes(document.getElementById("search").value.toLowerCase()));let sort=document.getElementById("sort").value;if(sort==="low")list.sort((a,b)=>a.price-b.price);if(sort==="high")list.sort((a,b)=>b.price-a.price);document.getElementById("products").innerHTML=list.map(p=>`<article class="product"><div class="product-photo"><img src="${p.img}" alt="${p.name}" loading="lazy">${p.tag?`<span class="tag">${p.tag}</span>`:""}<button class="heart" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'" aria-label="Add to wishlist">♡</button><button class="add" onclick="addToCart(${p.id})">ADD TO BAG</button></div><div class="product-info"><div class="product-name">${p.name}</div><div class="product-meta"><span class="price">${money(p.price)}</span><span class="rating">★★★★★</span></div></div></article>`).join("")||'<p>No products found. Try another search.</p>'}
+function addToCart(id){cart[id]=(cart[id]||0)+1;saveCart();openCart()}
+function saveCart(){localStorage.setItem("five09-cart",JSON.stringify(cart));renderCart()}
+function renderCart(){let entries=Object.entries(cart).filter(([id,q])=>q>0);let count=entries.reduce((s,[id,q])=>s+q,0);document.getElementById("bagCount").textContent=count;let total=0;document.getElementById("cartItems").innerHTML=entries.length?entries.map(([id,q])=>{let p=products.find(x=>x.id==id);total+=p.price*q;return `<div class="cart-row"><img src="${p.img}" alt=""><div style="flex:1"><p><b>${p.name}</b></p><p>${money(p.price)}</p><div class="qty"><button onclick="changeQty(${id},-1)">−</button><span>${q}</span><button onclick="changeQty(${id},1)">+</button></div></div></div>`}).join(""):'<div class="empty">Your bag is empty.</div>';document.getElementById("subtotal").textContent=money(total)}
+function changeQty(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];saveCart()}
+function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("backdrop").classList.add("show");renderCart()}
+function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("backdrop").classList.remove("show")}
+document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderProducts()}));
+document.querySelectorAll("[data-nav],[data-cat]").forEach(a=>a.addEventListener("click",()=>{activeFilter=a.dataset.nav||a.dataset.cat;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===activeFilter));renderProducts()}));
+document.getElementById("search").addEventListener("input",renderProducts);document.getElementById("sort").addEventListener("change",renderProducts);document.getElementById("year").textContent=new Date().getFullYear();renderProducts();renderCart();
+</script>
+</body>
+</html>
